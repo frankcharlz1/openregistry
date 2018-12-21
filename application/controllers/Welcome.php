@@ -18,8 +18,16 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	//$this->load->helper('form');
+    //$this->load->library('form_validation');
 	public function index()
 	{
 		$this->load->view('user_form');
+	}
+	public function insert()
+	{
+		$this->load->model('user_model');
+		$this->user_model->user_insert();
+		//$this->load->view('success');
 	}
 }

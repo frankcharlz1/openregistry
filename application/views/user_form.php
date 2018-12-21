@@ -71,7 +71,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Welcome to Open Registry</h1>
 
 	<div id="body">
+    <?php echo form_open('welcome/insert'); ?>
+		First name:<br>
+		<input type="text" name="fname"><br>
+		Surname:<br>
+		<input type="text" name="surname"><br>
+		Gender:<br>
+		  <input type="radio" name="gender" value="male" checked> Male<br>
+		  <input type="radio" name="gender" value="female"> Female<br>
+		  <input type="radio" name="gender" value="other"> Other<br>
+		Email:<br>
+		<input type="text" name="email"><br>
+		Phone:<br>
+		<input type="text" name="phone"><br>
+		Status:<br>
+		<input type="text" name="status"value="Active" disabled><br>
+		<br>
+		<input type="submit" value="Submit">
 
+		</form>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
